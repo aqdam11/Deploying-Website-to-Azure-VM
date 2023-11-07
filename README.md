@@ -47,10 +47,9 @@ We will be keeping this file in directory '/etc/nginx/sites-available/'
 3. server{
    	listen 80;
    	server_name ip;
-
-    	location / {
-        root /var/www/html;
-        index index.html;
+	location / {
+   		root /var/www/html;
+   		index index.html;
    	}
    }
 	Paste the above code and inplace of ip give ip of your vm.
