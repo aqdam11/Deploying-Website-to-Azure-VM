@@ -44,15 +44,15 @@ Now we have to configure the nginx to server yout html files, i.e creating a con
 We will be keeping this file in directory '/etc/nginx/sites-available/' 
 1. Ensure you are inside your vm.
 2. Use command sudo nano /etc/nginx/sites-available/your-site (This is creating a configuration file named your-site)
-3. server {
-    listen 80;
-    server_name ip;
+3. server{
+   	listen 80;
+   	server_name ip;
 
-    location / {
+    	location / {
         root /var/www/html;
         index index.html;
-    	}
-	}
+   	}
+   }
 	Paste the above code and inplace of ip give ip of your vm.
 4. Press ctrl+o and ctrl+x to save and exit
 
