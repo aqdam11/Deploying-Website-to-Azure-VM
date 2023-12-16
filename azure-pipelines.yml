@@ -1,17 +1,23 @@
-# HTML
-# Archive your static HTML project and save it with the build record.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+name: Deploy to Azure VM
 
-trigger:
-- main
+on:
+  push:
+    branches:
+      - main  # Replace 'main' with your desired branch name
 
-pool:
-  vmImage: ubuntu-latest
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
 
-steps:
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(build.sourcesDirectory)'
-    includeRootFolder: false
-- task: PublishBuildArtifacts@1
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Copy files to Azure VM
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.20.121.40.91 }}  # Azure VM host (IP address)
+          username: ${{ secrets.aqdam }}  # Azure VM username
+          password: ${{ secrets.Servings@123 }}  # Azure VM password
+          script: |
+            scp -o StrictHostKeyChecking=no -r index.html ${{ secrets.aqdam }}@${{ secrets.20.121.40.91 }}:/var/www/html
