@@ -16,8 +16,8 @@ jobs:
       - name: Copy files to Azure VM
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.20.121.40.91 }}  # Azure VM host (IP address)
-          username: ${{ secrets.aqdam }}  # Azure VM username
-          password: ${{ secrets.Servings@123 }}  # Azure VM password
+          host: ${{ secrets. }}  # Azure VM host (IP address)
+          username: ${{ secrets.}}  # Azure VM username
+          password: ${{ secrets.}}  # Azure VM password
           script: |
-            sshpass -p ${{ secrets.Servings@123 }} scp -o StrictHostKeyChecking=no -r index.html ${{ secrets.aqdam }}@${{ secrets.20.121.40.91 }}:/var/www/html
+            sshpass -p ${{ secrets.}} scp -o StrictHostKeyChecking=no -r index.html ${{ secrets. }}@${{ secrets. }}:/var/www/html
