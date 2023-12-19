@@ -75,4 +75,11 @@ If you are getting error, check for the permission to copy files
 
 NOW if you do a commit changes in your repo code, it will be directly reflected in your website
 
+Load Balancer:
+1. Created a new Azure vm as backupvm with same OS and services installed.
+2. Click on your main vm-> load balanceing -> add load balancing  -> Fill the details 
+3. Give your backupvm ip as backend pools and setup the load balancing  rules.
+4. Your load Balancer is done with a new public ip which we will use to access the website.
+5. Now to test it out, even if you stop your main vm, you will still be able to access the website which will be running on your backupvm
+
 
