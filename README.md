@@ -21,12 +21,12 @@ YOUR VM is CREATED AND DEPLOYED
 Logging into your VM and installing ngninx webserver
 1. Open Terminal. Use Command ssh username@ip
 2. Installing nginx
-	2.1 Run below commands and click on Yes when prompted
-	2.2 sudo apt update
-	2.3 sudo apt install nginx
-	2.4 sudo systemctl start nginx
-	2.5 sudo ststemctl status nginx
-   	2.6 sudo systemctl enable nginx
+3. Run below commands and click on Yes when prompted
+4. sudo apt update
+5. sudo apt install nginx
+6. sudo systemctl start nginx
+7. sudo ststemctl status nginx
+8. sudo systemctl enable nginx
 
 Now You have to copy your html file which you created to this azure vm.
 So before that we will be modifing the folder permission inside the vm where we will be keeping this file
