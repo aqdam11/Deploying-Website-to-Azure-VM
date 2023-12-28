@@ -82,5 +82,7 @@ Load Balancer:
 4. Your load Balancer is done with a new public ip which we will use to access the website.
 5. Now to test it out, even if you stop your main vm, you will still be able to access the website which will be running on your backupvm
 
+<img src = "MicrosoftTeams-image.png">
+
 
 
