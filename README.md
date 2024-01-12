@@ -42,6 +42,15 @@ Now install jenkins in your azure VM
 3. wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
 4. sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 5. sudo apt update
+
+curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+$ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+add this two command if you are getting error
+
 6. sudo apt install -y jenkins
 7. sudo systemctl start jenkins
 8. sudo systemctl enable jenkins
